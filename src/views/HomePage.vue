@@ -2,7 +2,7 @@
   <ion-page>
     <ion-header :translucent="true">
       <ion-toolbar>
-        <ion-title>Blank</ion-title>
+        <ion-title>Hallo</ion-title>
       </ion-toolbar>
     </ion-header>
 
@@ -17,12 +17,21 @@
         <strong>Ready to create an app?</strong>
         <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
       </div>
+
+      <ion-checkbox v-model="chkAgreement">I agree to the terms and conditions</ion-checkbox>
+      <ion-button @click="toggleCheckbox()" >Hallo</ion-button>
     </ion-content>
   </ion-page>
 </template>
 
 <script setup>
-import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/vue';
+import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonCheckbox, IonButton} from '@ionic/vue';
+import { ref } from 'vue';
+const chkAgreement = ref(true);
+
+const toggleCheckbox = () => {
+  chkAgreement.value = !chkAgreement.value;
+}
 </script>
 
 <style scoped>

@@ -22,7 +22,8 @@ npm-debug.log*
 /.sass-cache
 /.sourcemaps
 /.versions
-/.vscode/*
+/.node_modules
+/.vscode/* 
 !/.vscode/extensions.json
 /coverage
 /dist
